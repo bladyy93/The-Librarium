@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Librarium</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <h1>Welcome to the Librarium</h1>
+    <nav class="navbar navbar-expand-lg">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" ><a href="/">Home</a></li> 
+          <li class="nav-item"><a href="/books">Books</a></li>
+           <% if (user) { %>  
+            <li class="nav-item"><a href="/logout">Logout</a></li>  
+          <% } else { %>  
+            <li class="nav-item"><a href="/login">Login</a></li> 
+          <% } %>
+        </ul>
+      </nav>
+
+      <section class="mt-5">
+        <h2 class="mb-4 text-center">Latest Articles</h2>
+
+        <!-- Centered and Stacked Cards -->
+        <div class="d-flex flex-column align-items-center"> <!-- Ensures cards are stacked and centered -->
+            <!-- Article 1 -->
+            <div class="card mb-4" style="width: 80%;"> <!-- Adjust card width -->
+                <div class="card-body">
+                    <h5 class="card-title text-center" style="font-weight: bold;">Crafting Compelling Whodunits</h5>
+                    <p class="card-text" style="font-style: italic;">This article delves into the intricate art of writing mystery novels, exploring the techniques authors use to create gripping whodunits that keep readers guessing until the very end.</p>
+                    <p class="card-text">In the realm of literature, few genres offer as much intrigue and suspense as the classic whodunit. From Agatha Christie's cunning puzzles to Sir Arthur Conan Doyle's deductive mastermind, Sherlock Holmes, the mystery novel continues to captivate readers with its clever plots and surprising twists. But what exactly goes into crafting a compelling whodunit?
+
+                        At the heart of every successful mystery lies a delicate balance between revelation and concealment. Authors must skillfully plant clues throughout their narrative, leading readers down a labyrinth of possibilities while maintaining an air of uncertainty. The protagonist, often a detective or amateur sleuth, serves as the reader's guide, piecing together the evidence to uncover the truth.
+                        
+                        Character development is another crucial element in the construction of a whodunit. Each suspect must be meticulously crafted, with motives that are both plausible and hidden. Red herrings, false leads, and unreliable narrators add layers of complexity, keeping readers guessing until the final reveal.
+                        
+                        But perhaps the most essential ingredient in any mystery novel is the element of surprise. A well-executed plot twist can elevate a mediocre story to greatness, leaving readers stunned and eager for more. Whether it's a last-minute confession, a shocking revelation, or an unexpected betrayal, the best whodunits leave an indelible mark on the reader's psyche.
+                        
+                        In the end, the appeal of the whodunit lies not only in its suspenseful plot but also in its ability to engage the reader's intellect. As readers eagerly follow the clues and formulate their own theories, they become active participants in the narrative, unraveling the mystery alongside the protagonist. And it is this immersive experience that keeps them coming back for more, eager to solve the next tantalizing puzzle.</p>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="card mb-4" style="width: 80%;"> <!-- Adjust card width -->
+                <div class="card-body">
+                    <h5 class="card-title text-center" style="font-weight: bold;">The Evolution of Dystopian Fiction</h5>
+                    <p class="card-text" style="font-style: italic;">From Orwell's "1984" to Atwood's "The Handmaid's Tale," this piece traces the development of dystopian literature, examining how these novels reflect societal anxieties and offer cautionary tales for the future.</p>
+                    <p class="card-text">Dystopian fiction has long held a mirror to society, reflecting our deepest fears and anxieties about the future. From George Orwell's bleak vision of totalitarianism in "1984" to Margaret Atwood's chilling portrayal of patriarchal oppression in "The Handmaid's Tale," dystopian novels have served as cautionary tales, warning us of the dangers that lie ahead if we fail to heed the lessons of the past.
+
+                        But as the world around us changes, so too does the landscape of dystopian literature. Where once authors focused primarily on political oppression and surveillance, they now grapple with a host of new challenges, from environmental degradation to technological tyranny. The dystopian novels of today are as diverse as the world they inhabit, exploring themes of inequality, identity, and resistance in a rapidly changing society.
+                        
+                        One of the most striking developments in recent dystopian fiction is the emergence of diverse voices and perspectives. Authors from marginalized communities are reclaiming the genre, infusing it with their own experiences and insights. This diversity of voices enriches the genre, offering fresh perspectives on familiar themes and challenging readers to confront their own biases and assumptions.
+                        
+                        At its core, dystopian fiction remains a powerful tool for social critique, holding a mirror to society and forcing us to confront uncomfortable truths about ourselves and our world. By imagining the worst-case scenarios of tomorrow, dystopian novels compel us to strive for a better future today, lest we find ourselves living in the dystopias we once only imagined.</p>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="card mb-4" style="width: 80%;"> <!-- Adjust card width -->
+                <div class="card-body">
+                    <h5 class="card-title text-center" style="font-weight: bold;">Rediscovering Classic Literature</h5>
+                    <p class="card-text" style="font-style: italic;">Dive into the hidden gems of classic literature as this article celebrates the lesser-known works of renowned authors, shedding light on forgotten voices and overlooked masterpieces that deserve recognition.</p>
+                    <p class="card-text">In the vast landscape of literature, certain works stand as towering giants, revered for their profound insight, timeless wisdom, and enduring relevance. Yet, for every celebrated classic, there are countless forgotten gems waiting to be rediscovered by a new generation of readers.
+
+                        From overlooked masterpieces to hidden treasures, classic literature is full of surprises for those willing to venture off the beaten path. Authors like Edith Wharton, Zora Neale Hurston, and Jorge Luis Borges have left behind a rich legacy of work that deserves to be celebrated alongside their more famous counterparts.
+                        
+                        But why do some works endure while others fade into obscurity? The answer lies in the ever-shifting currents of literary taste and cultural relevance. While some novels may resonate deeply with readers in their own time, others may be ahead of their time, awaiting rediscovery by future generations.
+                        
+                        Fortunately, the digital age has made it easier than ever to access classic literature from around the world. Online archives, e-book platforms, and digital libraries offer a wealth of resources for those eager to explore the literary canon in all its richness and diversity.
+                        
+                        In the end, the true value of classic literature lies not in its age or prestige but in its ability to speak to the human experience across time and space. Whether exploring the intricacies of love and loss, the complexities of power and privilege, or the eternal quest for meaning and purpose, classic literature continues to offer insights and inspiration to readers of all ages and backgrounds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      
+</body>
+</html>
+

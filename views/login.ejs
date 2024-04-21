@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <h1>Login to the Librarium</h1>
+    <nav class="navbar navbar-expand-lg">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" ><a href="/">Home</a></li> 
+          <li class="nav-item"><a href="/books">Books</a></li>
+           <% if (user) { %>  
+            <li class="nav-item"><a href="/logout">Logout</a></li>  
+          <% } else { %>  
+            <li class="nav-item"><a href="/login">Login</a></li> 
+          <% } %>
+        </ul>
+      </nav>
+      <section class="vh-100" style="background-color: #E4C59E;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+              <div class="card d-flex justify-content-center align-items-center" style="border-radius: 1rem; background-color:#AF8260; height: 100%;">
+                <div class="card-body">
+                  <div class="text-center"> <!-- This centers the content inside the card-body -->
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; font-weight: bold;">Sign into your account</h5>
+      
+                    <% if (message) { %>
+                      <div class="alert alert-danger"><%= message %></div>
+                    <% } %>
+      
+                    <form action="/login" method="post">
+                      <div class="form-outline mb-3">
+                        <label class="form-label" for="username" style="font-weight: bold;">Username:</label>
+                        <input type="text" name="username" class="form-control form-control-lg" placeholder="Username" required />
+                        
+                      </div>
+      
+                      <div class="form-outline mb-3">
+                        <label class="form-label" for="password" style="font-weight: bold;">Password:</label>
+                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required />
+                        
+                      </div>
+      
+                      <div class="pt-1 mb-4">
+                        <button class="btn btn-dark btn-lg btn-block" type="submit" style="background-color: #803D3B;">Login</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+</body>
+</html>
+
+

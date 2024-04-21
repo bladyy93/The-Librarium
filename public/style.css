@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:#E4C59E;
+    background-image: url('images/lib.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: rgb(79, 49, 5);
+    text-align: center;
+}
+
+.nav-item {
+    margin: 10px;
+    display: inline;
+    text-align: right;
+}
+
+.navbar-nav {
+    display: flex;
+     /* Centers navbar horizontally */
+    align-items: center; /* Aligns items vertically */
+    
+}
+
+.navbar {
+    background-color: #AF8260;
+    display: flex;
+    justify-content:space-between;
+}
+
+.navbar a {
+    color:#803D3B;
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+}
+
+.login {
+    color: #803D3B;
+}
+
+.card-text {
+    text-indent: 20px;
+}

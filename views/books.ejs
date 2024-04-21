@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>Books in the Librarium</h1>
+    <nav class="navbar navbar-expand-lg">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" ><a href="/">Home</a></li> 
+          <li class="nav-item"><a href="/books">Books</a></li>
+           <% if (user) { %>  
+            <li class="nav-item"><a href="/logout">Logout</a></li>  
+          <% } else { %>  
+            <li class="nav-item"><a href="/login">Login</a></li> 
+          <% } %>
+        </ul>
+      </nav>
+
+      <div class="d-flex justify-content-center my-4">
+        <a href="/add-book" class="btn" style="background-color: #803D3B; color: white;">Add a New Book</a>
+      </div>
+      
+      
+ 
+
+  <div class="container">
+    <div class="row">
+      <% books.forEach((book) => { %>
+        <div class="col-md-6 col-lg-4 mb-4"> <!-- Adjust card size based on your preference -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" style="font-size: 25px; font-weight: bolder;"><%= book.title %></h5>
+              <p class="card-text"><strong>Author:</strong> <%= book.author %></p>
+              <p class="card-text"><strong>Date Read:</strong> <%= book.date_read %></p>
+              <p class="card-text"><strong>Comment:</strong> <%= book.comment %></p>
+
+              <form action="/add-book" method="get" style="display:inline;">
+                <input type="hidden" name="bookId" value="<%= book._id %>">
+                <button type="submit" class="btn btn-primary">Edit</button>
+              </form>
+              
+              <form action="/books/<%= book._id %>/delete" method="post" style="display:inline;">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+  
+</body>
+</html>
