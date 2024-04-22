@@ -13,14 +13,6 @@ const port = 3000;
 
 // const uri = 'mongodb://localhost:27017/the-librarium';
 
-// mongoose.connect(uri)
-//   .then(() => {
-//     console.log('MongoDB connected successfully');
-//   })
-//   .catch((err) => {
-//     console.error('MongoDB connection error:', err);
-//   });
-const uri = process.env.MONGODB_URI || 'fallback_value_if_needed';
 mongoose.connect(uri)
   .then(() => {
     console.log('MongoDB connected successfully');
@@ -28,6 +20,14 @@ mongoose.connect(uri)
   .catch((err) => {
     console.error('MongoDB connection error:', err);
   });
+// const uri = process.env.MONGODB_URI || 'fallback_value_if_needed';
+// mongoose.connect(uri)
+//   .then(() => {
+//     console.log('MongoDB connected successfully');
+//   })
+//   .catch((err) => {
+//     console.error('MongoDB connection error:', err);
+//   });
 
 app.use(express.urlencoded({ extended: true })); 
 app.use(
